@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-mode="hype">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tresillo × ZUKU — Create what moves next.</title>
-  <meta name="description" content="Tresillo가 만드는 ZUKU — Hype, Swipe, Jump로 이어지는 인터랙티브 UGC 미디어 플랫폼.">
+  <meta name="description" content="트레실로가 만드는 ZUKU. 영상·숏폼·게임이 한 계정에서 이어지는 창작·플레이 플랫폼입니다.">
   <meta name="theme-color" content="#0a0a0f">
+  <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://zukuapp.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zukuapp.github.io/">
   <meta property="og:site_name" content="Tresillo × ZUKU">
   <meta property="og:title" content="Tresillo × ZUKU — Create what moves next.">
-  <meta property="og:description" content="Create what moves next. 인터랙티브 UGC 미디어의 새로운 표준.">
+  <meta property="og:description" content="Create what moves next. 창작과 플레이가 이어지는 ZUKU 플랫폼.">
   <meta property="og:image" content="https://zukuapp.github.io/assets/og-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -19,118 +20,269 @@
   <meta property="og:locale" content="ko_KR">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tresillo × ZUKU — Create what moves next.">
-  <meta name="twitter:description" content="Create what moves next. 인터랙티브 UGC 미디어의 새로운 표준.">
+  <meta name="twitter:description" content="Create what moves next. 창작과 플레이가 이어지는 ZUKU 플랫폼.">
   <meta name="twitter:image" content="https://zukuapp.github.io/assets/og-card.png">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/zuku-mark.svg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/zuku-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    document.documentElement.classList.add("js");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("reduced");
+    }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#top">본문으로 건너뛰기</a>
+  <div class="progress" aria-hidden="true"><span class="progress-bar"></span></div>
   <div class="noise" aria-hidden="true"></div>
+  <div class="spot" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="ZUKU 홈">
-      <img src="assets/zuku-mark.svg" alt="" width="28" height="34" aria-hidden="true">
+    <a class="brand" href="/" aria-label="ZUKU 홈">
+      <img src="/assets/zuku-mark.svg" alt="" width="28" height="34" aria-hidden="true">
       <span class="brand-name">ZUKU</span>
       <span class="company">by TRESILLO</span>
     </a>
     <nav aria-label="주요 메뉴">
-      <a href="#platform">Platform</a>
-      <a href="#technology">Technology</a>
-      <a href="#company">Company</a>
-      <a class="nav-cta" href="mailto:contact@crevision.kr">Contact</a>
+      <a href="/platform/">Platform</a>
+      <a href="/technology/">Technology</a>
+      <a href="/company/">Company</a>
+      <a class="nav-cta magnetic" href="/contact/">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="field" id="field" aria-hidden="true"></canvas>
       <div class="hero-orbit orbit-one" aria-hidden="true"></div>
       <div class="hero-orbit orbit-two" aria-hidden="true"></div>
-      <p class="eyebrow reveal">TRESILLO PRESENTS · ZUKU</p>
-      <h1 class="reveal">Create what<br><em>moves next.</em></h1>
-      <p class="hero-copy reveal">보고, 넘기고, 직접 뛰어드는 순간까지.<br>ZUKU는 창작과 플레이가 하나로 이어지는 인터랙티브 UGC 미디어 플랫폼입니다.</p>
-      <div class="hero-actions reveal">
-        <a class="button primary" href="#platform">Explore ZUKU <span aria-hidden="true">↘</span></a>
-        <a class="button ghost" href="https://github.com/zukuapp">GitHub <span aria-hidden="true">↗</span></a>
+
+      <p class="eyebrow hero-in">TRESILLO PRESENTS · ZUKU</p>
+      <h1 id="hero-title" class="hero-in">Create what<br><em>moves next.</em></h1>
+      <p class="hero-copy hero-in">보고, 넘기고, 직접 뛰어드는 순간까지.<br>ZUKU는 창작과 플레이가 한 흐름으로 이어지는 미디어 플랫폼입니다.</p>
+      <div class="hero-actions hero-in">
+        <a class="button primary magnetic" href="#stage">지금 체험하기 <span aria-hidden="true">↘</span></a>
+        <a class="button ghost" href="/platform/">Platform <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="hero-index" aria-label="플랫폼 핵심 카테고리">
-        <span>01 HYPE</span><span>02 SWIPE</span><span>03 JUMP</span>
+
+      <div class="stage" id="stage" data-mode="hype">
+        <div class="stage-bar">
+          <div class="stage-tabs" role="tablist" aria-label="ZUKU 체험 모드">
+            <button type="button" class="stage-tab" role="tab" id="tab-hype" aria-controls="panel-hype" aria-selected="true" data-mode="hype">
+              <span class="tab-num">01</span> Hype
+            </button>
+            <button type="button" class="stage-tab" role="tab" id="tab-swipe" aria-controls="panel-swipe" aria-selected="false" tabindex="-1" data-mode="swipe">
+              <span class="tab-num">02</span> Swipe
+            </button>
+            <button type="button" class="stage-tab" role="tab" id="tab-jump" aria-controls="panel-jump" aria-selected="false" tabindex="-1" data-mode="jump">
+              <span class="tab-num">03</span> Jump
+            </button>
+          </div>
+          <p class="stage-live" aria-hidden="true"><span></span> INTERACTIVE</p>
+        </div>
+
+        <div class="stage-frame">
+          <div class="stage-panel is-active" id="panel-hype" role="tabpanel" aria-labelledby="tab-hype" data-mode="hype">
+            <div class="hype-world" id="hype-world" tabindex="0" aria-label="Hype 시네마틱 스테이지. 포인터를 움직이거나 타임라인을 드래그하세요.">
+              <div class="hype-scene s1 is-on" data-scene="0">
+                <div class="letterbox"></div>
+                <div class="horizon"></div>
+                <div class="hype-card c-left"></div>
+                <div class="hype-card c-right"></div>
+                <p class="hype-title">HORIZON</p>
+              </div>
+              <div class="hype-scene s2" data-scene="1">
+                <div class="masonry">
+                  <span class="tile t1"></span>
+                  <span class="tile t2"></span>
+                  <span class="tile t3"></span>
+                </div>
+                <p class="hype-title">GALLERY</p>
+              </div>
+              <div class="hype-scene s3" data-scene="2">
+                <div class="tunnel"><span></span><span></span><span></span></div>
+                <p class="hype-title">IMMERSE</p>
+              </div>
+              <div class="hype-chrome">
+                <span id="hype-label">SCENE 01 — HORIZON</span>
+                <span id="hype-clock">00:00 / 00:12</span>
+              </div>
+            </div>
+            <div class="hype-controls">
+              <button type="button" class="icon-btn" id="hype-toggle" aria-pressed="true" aria-label="자동 재생 일시정지">❚❚</button>
+              <input type="range" id="hype-scrub" min="0" max="1000" value="0" aria-valuemin="0" aria-valuemax="1000" aria-label="Hype 타임라인">
+              <span class="hype-hint">드래그 · 포인터 이동 · ← →</span>
+            </div>
+          </div>
+
+          <div class="stage-panel" id="panel-swipe" role="tabpanel" aria-labelledby="tab-swipe" data-mode="swipe" hidden>
+            <div class="swipe-shell">
+              <div class="swipe-phone">
+                <div class="swipe-notch" aria-hidden="true"></div>
+                <div class="swipe-reel" id="swipe-reel" tabindex="0" aria-label="Swipe 피드. 세로로 넘기세요.">
+                  <article class="swipe-clip clip-a">
+                    <div class="clip-art" aria-hidden="true"></div>
+                    <div class="clip-copy">
+                      <p class="clip-meta">@lumen · now</p>
+                      <h3>지금 이 감각</h3>
+                      <p>손끝에서 끊기지 않는 세로 피드.</p>
+                    </div>
+                  </article>
+                  <article class="swipe-clip clip-b">
+                    <div class="clip-art" aria-hidden="true"></div>
+                    <div class="clip-copy">
+                      <p class="clip-meta">@pulse · 12s</p>
+                      <h3>MOVE</h3>
+                      <p>다음 클립이 이미 손 안에 있습니다.</p>
+                    </div>
+                  </article>
+                  <article class="swipe-clip clip-c">
+                    <div class="clip-art" aria-hidden="true"></div>
+                    <div class="clip-copy">
+                      <p class="clip-meta">@grid · 28s</p>
+                      <h3>리듬이 피드가 된다</h3>
+                      <p>보고 넘기는 일이 곧 참여입니다.</p>
+                    </div>
+                  </article>
+                  <article class="swipe-clip clip-d">
+                    <div class="clip-art" aria-hidden="true"></div>
+                    <div class="clip-copy">
+                      <p class="clip-meta">@tresillo · 3·3·2</p>
+                      <h3>세 번째 박자</h3>
+                      <p>익숙한 흐름에 새 비트를 더합니다.</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="swipe-rail" aria-hidden="true">
+                  <span class="rail-btn like"></span>
+                  <span class="rail-btn chat"></span>
+                  <span class="rail-btn send"></span>
+                </div>
+                <div class="swipe-dots" id="swipe-dots" aria-hidden="true"></div>
+              </div>
+              <p class="swipe-hint">휠 · 스와이프 · ↑ ↓</p>
+            </div>
+          </div>
+
+          <div class="stage-panel" id="panel-jump" role="tabpanel" aria-labelledby="tab-jump" data-mode="jump" hidden>
+            <div class="jump-wrap">
+              <canvas id="jump-canvas" width="960" height="420"></canvas>
+              <div class="jump-hud">
+                <span class="jump-score" id="jump-score">000</span>
+                <span class="jump-best" id="jump-best"></span>
+              </div>
+              <div class="jump-overlay is-on" id="jump-overlay">
+                <p>Jump</p>
+                <span>클릭하거나 Space를 눌러 점프</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="manifesto">
       <p class="section-label">THE PLATFORM</p>
       <p class="statement reveal">콘텐츠는 더 이상<br><strong>재생만 되지 않습니다.</strong></p>
-      <p class="manifesto-copy reveal">영상과 이미지, 인터랙티브 경험과 게임이 하나의 흐름 안에서 만납니다. 창작자는 형식의 경계 없이 표현하고, 사용자는 관객에서 플레이어로 자연스럽게 전환합니다.</p>
+      <p class="manifesto-copy reveal">영상과 이미지, 인터랙티브 경험과 게임이 하나의 흐름 안에서 만납니다. 위의 무대가 그 전환을 보여 줍니다. 각 제품의 역할은 아래 페이지에서 소개합니다.</p>
+      <p style="margin-top:1.5rem;"><a class="format-try" href="/platform/">Platform 전체 보기 <span aria-hidden="true">↗</span></a></p>
     </section>
 
     <section id="platform" class="formats">
-      <article class="format-card hype reveal">
+      <a class="format-card hype reveal" href="/hype/">
         <div class="format-number" aria-hidden="true">01</div>
         <div class="format-art" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="format-content">
           <p class="tag">DISCOVER · IMMERSE</p>
           <h2>Hype</h2>
-          <p>인터랙티브 롱폼, 가로형 영상과 사진. 깊게 몰입하고 오래 기억되는 메인 피드.</p>
+          <p>가로형 영상·사진·인터랙티브 작품. 오래 머무르는 창작 커뮤니티입니다.</p>
+          <span class="format-try">자세히 보기 <span aria-hidden="true">↗</span></span>
         </div>
-      </article>
-      <article class="format-card swipe reveal">
+      </a>
+      <a class="format-card swipe reveal" href="/swipe/">
         <div class="format-number" aria-hidden="true">02</div>
         <div class="format-art" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="format-content">
           <p class="tag">VERTICAL · INSTANT</p>
           <h2>Swipe</h2>
-          <p>손끝에서 끊김 없이 이어지는 세로형 비디오. 지금의 감각을 가장 빠르게 만나는 피드.</p>
+          <p>세로형 숏폼 비디오. 지금 이 감각을 가장 빠르게 넘기는 피드입니다.</p>
+          <span class="format-try">자세히 보기 <span aria-hidden="true">↗</span></span>
         </div>
-      </article>
-      <article class="format-card jump reveal">
+      </a>
+      <a class="format-card jump reveal" href="/jump/">
         <div class="format-number" aria-hidden="true">03</div>
         <div class="format-art" aria-hidden="true"><span></span><span></span><span></span></div>
         <div class="format-content">
           <p class="tag">PLAY · PARTICIPATE</p>
           <h2>Jump</h2>
-          <p>브라우저에서 바로 시작하는 WASM·HTML5 게임. 감상에서 참여로 뛰어드는 플레이 공간.</p>
+          <p>브라우저에서 바로 즐기는 게임 허브. 감상 다음, 직접 뛰어드는 플레이 공간입니다.</p>
+          <span class="format-try">자세히 보기 <span aria-hidden="true">↗</span></span>
         </div>
-      </article>
+      </a>
+    </section>
+
+    <section>
+      <p class="section-label">MORE SURFACES</p>
+      <div class="surface-map compact">
+        <a href="/thread/"><p class="tag">WWW</p><h3>Thread</h3><p>통합 홈 · 미리보기 광장</p></a>
+        <a href="/vive/"><p class="tag">WRITE</p><h3>Vive</h3><p>글 · 문학 · 연재</p></a>
+        <a href="/vine/"><p class="tag">SOUND</p><h3>Vine</h3><p>음악 · 보이스 · 공유</p></a>
+        <a href="/aist/"><p class="tag">AI</p><h3>Aist</h3><p>AI로 게임을 만드는 웹 스튜디오</p></a>
+      </div>
     </section>
 
     <section id="technology" class="technology">
       <div class="tech-heading reveal">
         <p class="section-label">BUILT WITH INTENT</p>
-        <h2>Open standards.<br>Private rigor.</h2>
+        <h2>공개 표준.<br>엄격한 경계.</h2>
       </div>
       <div class="tech-grid">
-        <article class="reveal">
+        <a class="tilt reveal" href="/technology/unprivileged/">
           <span class="tech-icon" aria-hidden="true">◇</span>
-          <h3>Unprivileged by design</h3>
-          <p>인터랙티브 워크로드는 권한 없는 격리 경계 안에서 실행됩니다. 보안은 기능이 아니라 출발점입니다.</p>
-        </article>
-        <article class="reveal">
+          <h3>안전한 실행 경계</h3>
+          <p>게임과 인터랙티브는 호스트 권한 없이, 정해진 경계 안에서만 실행됩니다. 보안이 출발점입니다.</p>
+        </a>
+        <a class="tilt reveal" href="/technology/contracts/">
           <span class="tech-icon" aria-hidden="true">⌁</span>
-          <h3>Explicit contracts</h3>
-          <p>서비스 간 의존성, API 버전과 스키마를 명시합니다. 예측 가능한 경계가 안정적인 확장을 만듭니다.</p>
-        </article>
-        <article class="reveal">
+          <h3>명확한 제품 규칙</h3>
+          <p>제품 간 연결 방식과 공개 규칙을 문서에 고정합니다. 예측 가능한 경계가 안정적인 확장을 만듭니다.</p>
+        </a>
+        <a class="tilt reveal" href="/technology/resources/">
           <span class="tech-icon" aria-hidden="true">◫</span>
-          <h3>Resource-aware</h3>
-          <p>CPU, 메모리, PID와 파일 디스크립터에 계약된 한도를 적용해 플랫폼과 창작물을 함께 보호합니다.</p>
-        </article>
-        <article class="reveal">
+          <h3>리소스 한도</h3>
+          <p>CPU·메모리 등 실행 한도를 미리 정해 플랫폼과 창작물을 함께 보호합니다.</p>
+        </a>
+        <a class="tilt reveal" href="/technology/standards/">
           <span class="tech-icon" aria-hidden="true">∞</span>
-          <h3>Standards first</h3>
-          <p>WebAssembly, Rust, Next.js와 표준 웹 기술을 기반으로 지속 가능하고 이식 가능한 생태계를 설계합니다.</p>
-        </article>
+          <h3>공개 표준 우선</h3>
+          <p>웹 표준과 검증된 오픈소스 스택을 바탕으로, 오래 가는 플랫폼을 설계합니다.</p>
+        </a>
       </div>
-      <p class="tech-note">보안 계약과 공개 표준은 투명하게, 격리 핵심 구현은 엄격하게 보호합니다.</p>
+      <p class="tech-note"><a href="/technology/">기술 개요 보기 ↗</a></p>
     </section>
 
     <section id="company" class="company-section">
-      <div class="company-mark reveal">TRESILLO<span aria-hidden="true">®</span></div>
+      <div class="company-visual reveal">
+        <a class="company-mark" href="/company/" aria-label="Tresillo 회사 페이지">
+          TRESILLO<span aria-hidden="true">®</span>
+        </a>
+        <div class="tresillo" aria-hidden="true">
+          <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span>
+          <span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span>
+          <span style="--i:6"></span><span style="--i:7"></span>
+        </div>
+        <p class="beat-caption">3 + 3 + 2 · the third beat</p>
+      </div>
       <div class="company-copy reveal">
         <p class="section-label">THE COMPANY</p>
-        <h2>Culture, technology<br>and a third beat.</h2>
-        <p>트레실로는 익숙한 리듬에 새로운 박자를 더하는 기술 회사입니다. 우리는 사람의 표현을 확장하고, 창작물이 더 오래 살아남는 디지털 공간을 만듭니다.</p>
+        <h2>문화와 기술,<br>그리고 세 번째 박자.</h2>
+        <p>트레실로는 익숙한 리듬에 새 박자를 더하는 기술 회사입니다. 사람의 표현을 넓히고, 창작물이 오래 남는 디지털 공간을 만듭니다.</p>
+        <p><a class="format-try" href="/company/">회사 이야기 <span aria-hidden="true">↗</span></a></p>
         <dl>
           <div><dt>Platform</dt><dd>ZUKU</dd></div>
           <div><dt>Web</dt><dd><a href="https://zuzunza.com">zuzunza.com <span aria-hidden="true">↗</span></a></dd></div>
@@ -141,17 +293,24 @@
 
     <section class="contact">
       <p class="section-label">START A CONVERSATION</p>
-      <h2 class="reveal">What will you<br>make <em>move?</em></h2>
-      <a class="contact-link reveal" href="mailto:contact@crevision.kr">contact@crevision.kr <span aria-hidden="true">↗</span></a>
+      <h2 class="reveal">무엇을<br><em>움직이게</em> 할까요?</h2>
+      <a class="contact-link reveal magnetic" href="mailto:contact@crevision.kr">contact@crevision.kr <span aria-hidden="true">↗</span></a>
+      <p style="margin-top:1.1rem;"><a class="format-try" href="/contact/">문의 페이지 <span aria-hidden="true">↗</span></a></p>
     </section>
   </main>
 
   <footer>
     <span>© 2026 TRESILLO. ALL RIGHTS RESERVED.</span>
+    <span class="foot-links">
+      <a href="/platform/">Platform</a>
+      <a href="/technology/">Technology</a>
+      <a href="/company/">Company</a>
+      <a href="/contact/">Contact</a>
+      <a href="https://github.com/zukuapp">GitHub</a>
+    </span>
     <span>SEOUL · KOREA</span>
-    <span>ZUKU / ZUZUNZA.COM</span>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>

@@ -5,18 +5,24 @@
 - 공개 주소: <https://zukuapp.github.io/>
 - 서비스: <https://zuzunza.com>
 - 조직: [github.com/zukuapp](https://github.com/zukuapp)
+- 문의: contact@crevision.kr
 
 ## 구성
 
 | 경로 | 역할 |
 |---|---|
-| `index.html` | 단일 페이지 랜딩 (Hero · Platform · Technology · Company · Contact) |
-| `styles.css` | 디자인 토큰 및 레이아웃. ZUKU 디자인 시스템 팔레트를 따름 |
-| `script.js` | 스크롤 리빌, 스티키 헤더. 의존성 없음 |
+| `/` | 허브. Hype/Swipe/Jump 체험 무대 + 상세 페이지 입구 |
+| `/platform/` | 제품 표면 지도 |
+| `/hype/` `/swipe/` `/jump/` | 미디어 3종 상세 + 인터랙티브 데모 |
+| `/jump/studio/` | Jump Studio 배급 파이프라인 |
+| `/thread/` `/vive/` `/vine/` `/aist/` | 나머지 제품 표면 |
+| `/technology/` | 기술 개요와 4개 계약 페이지 |
+| `/company/` `/contact/` | 회사 · 문의 |
+| `styles.css` / `script.js` | 토큰·레이아웃·인터랙션. 의존성 없음 |
 | `assets/` | 브랜드 마크 · 파비콘 · OG 카드 |
-| `404.html` | 404 페이지 |
+| `404.html` | 404 |
 | `robots.txt`, `sitemap.xml` | 크롤링 · 색인 |
-| `.nojekyll` | Jekyll 빌드 파이프라인 비활성화 (정적 파일 그대로 서빙) |
+| `.nojekyll` | Jekyll 비활성 |
 
 ## 미디어 3종
 
