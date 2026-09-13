@@ -1,34 +1,50 @@
 # zukuapp.github.io
 
-**Tresillo × ZUKU** 기업 소개 사이트. GitHub Pages로 발행되는 정적 사이트입니다.
+<div align="center">
 
-- 공개 주소: <https://zukuapp.github.io/>
-- 서비스: <https://zuzunza.com>
-- 조직: [github.com/zukuapp](https://github.com/zukuapp)
-- 문의: contact@crevision.kr
+![ZUKU mark](/assets/zuku-mark.svg)
+
+# Tresillo × ZUKU
+
+**Create what moves next.**
+
+</div>
+
+> **공개 주소**: <https://zukuapp.github.io/>  
+> **서비스**: <https://zuzunza.com>  
+> **조직**: <https://github.com/zukuapp>  
+> **문의**: contact@crevision.kr
+
+ZUKU(즈쿠) 기업 소개 사이트 저장소입니다. GitHub Pages로 정적으로 발행됩니다. 의존성이 없는 HTML/CSS/JS만 사용합니다.
 
 ## 구성
 
 | 경로 | 역할 |
 |---|---|
-| `/` | 허브. Hype/Swipe/Jump 체험 무대 + 상세 페이지 입구 |
-| `/platform/` | 제품 표면 지도 |
-| `/hype/` `/swipe/` `/jump/` | 미디어 3종 상세 + 인터랙티브 데모 |
+| `/` | 허브. Hype / Swipe / Jump 인터랙티브 체험 무대 + 제품·회사·기술 입구 |
+| `/platform/` | Thread · Hype · Swipe · Jump · Jump Studio · Vive · Vine · Aist 제품 지도 |
+| `/hype/` | 가로 롱폼 + 인터랙티브 상세 |
+| `/swipe/` | 세로 숏폼 상세 |
+| `/jump/` | WASM/HTML5 게임 허브 |
 | `/jump/studio/` | Jump Studio 배급 파이프라인 |
-| `/thread/` `/vive/` `/vine/` `/aist/` | 나머지 제품 표면 |
-| `/technology/` | 기술 개요와 4개 계약 페이지 |
-| `/company/` `/contact/` | 회사 · 문의 |
-| `styles.css` / `script.js` | 토큰·레이아웃·인터랙션. 의존성 없음 |
-| `assets/` | 브랜드 마크 · 파비콘 · OG 카드 |
-| `404.html` | 404 |
-| `robots.txt`, `sitemap.xml` | 크롤링 · 색인 |
-| `.nojekyll` | Jekyll 비활성 |
+| `/thread/` | 통합 홈 · 미리보기 광장 |
+| `/vive/` | 글 · 문학 · 연재 |
+| `/vine/` | 음악 · 보이스 · 공유 |
+| `/aist/` | AI로 게임을 만드는 웹 스튜디오 |
+| `/technology/` | 기술 개요 + 안전한 경계 · 명확한 제품 규칙 · 리소스 한도 · 공개 표준 우선 |
+| `/company/` | 회사 소개 |
+| `/contact/` | 문의 |
+| `/docs/index.md` | 사이트 자체 가이드 |
 
-## 미디어 3종
+## 정적 자산
 
-- **Hype** — 인터랙티브 롱폼 · 가로형 영상 · 사진
-- **Swipe** — 세로형 숏폼 영상
-- **Jump** — WASM/HTML5 게임
+| 파일 | 용도 |
+|---|---|
+| `styles.css` | 토큰 · 레이아웃 · 애니메이션 · 인터랙션 |
+| `script.js` | 체험 무대 탭/스크러브/포인터 인터랙션 |
+| `assets/favicon.svg` | 파비콘 |
+| `assets/zuku-mark.svg` | 브랜드 마크 |
+| `assets/og-card.png` | OG/Twitter 카드 |
 
 ## 로컬 확인
 
@@ -41,8 +57,14 @@ python -m http.server 8080
 
 ## 브랜드 표기
 
-- 브랜드: **ZUKU (즈쿠)** · 회사: **Tresillo (트레실로)**
-- 조직 접두사: `zuku-` · GitHub 조직: `zukuapp`
+- 플랫폼: **ZUKU (즈쿠)**
+- 회사: **Tresillo (트레실로)**
+- 조직 접두사: `zuku-`
+- GitHub 조직: `zukuapp`
+
+## 배포
+
+`main` 브랜치 루트로 GitHub Pages 발행. `.nojekyll`로 Jekyll 처리를 비활성화했습니다.
 
 ---
 

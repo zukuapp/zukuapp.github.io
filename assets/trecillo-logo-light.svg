@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Trecillo Company Wordmark - Light Background -->
+  <defs>
+    <linearGradient id="trecilloGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0A0A0F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1A1A2E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D2D44;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="trecilloAccentGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC008C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="200" fill="none"/>
+
+  <text
+    x="400" y="120"
+    text-anchor="middle"
+    font-family="'Syne', 'Inter', 'Pretendard', -apple-system, sans-serif"
+    font-size="96"
+    font-weight="800"
+    fill="url(#trecilloGradientLight)"
+    letter-spacing="8"
+    font-feature-settings="'ss01' 1, 'cv01' 1"
+  >TRECILLO</text>
+
+  <text
+    x="630" y="70"
+    text-anchor="middle"
+    font-family="'Syne', 'Inter', 'Pretendard', -apple-system, sans-serif"
+    font-size="20"
+    font-weight="700"
+    fill="#0A0A0F"
+    opacity="0.5"
+  >®</text>
+
+  <path
+    d="M 180 135 Q 400 155 620 135"
+    stroke="url(#trecilloAccentGradientLight)"
+    stroke-width="3"
+    fill="none"
+    stroke-linecap="round"
+  />
+</svg>
