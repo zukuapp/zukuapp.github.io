@@ -2,9 +2,10 @@
 
 <div align="center">
 
-![ZUKU mark](/assets/zuku-mark.svg)
+![Trecillo](/assets/brand/trecillo/trecillo-horizontal-white.svg)
+![ZUKU trinity](/assets/brand/zuku/zuku-symbol-color-transparent.png)
 
-# Tresillo × ZUKU
+# Trecillo × ZUKU
 
 **Create what moves next.**
 
@@ -42,8 +43,10 @@ ZUKU(즈쿠) 기업 소개 사이트 저장소입니다. GitHub Pages로 정적�
 |---|---|
 | `styles.css` | 토큰 · 레이아웃 · 애니메이션 · 인터랙션 |
 | `script.js` | 체험 무대 탭/스크러브/포인터 인터랙션 |
-| `assets/favicon.svg` | 파비콘 |
-| `assets/zuku-mark.svg` | 브랜드 마크 |
+| `assets/favicon.svg` | Trecillo 심볼 파비콘 (공식 CI) |
+| `assets/trecillo-logo.svg` | Trecillo 가로 로고 (화이트) |
+| `assets/zuku-mark.svg` | ZUKU 트리니티 PNG 래퍼 |
+| `assets/brand/` | Trecillo SVG · ZUKU PNG · 2026 teapot · Crevision 워드마크 |
 | `assets/og-card.png` | OG/Twitter 카드 |
 
 ## 로컬 확인
@@ -58,7 +61,7 @@ python -m http.server 8080
 ## 브랜드 표기
 
 - 플랫폼: **ZUKU (즈쿠)**
-- 회사: **Tresillo (트레실로)**
+- 회사: **Trecillo (트레실로)**
 - 조직 접두사: `zuku-`
 - GitHub 조직: `zukuapp`
 
@@ -68,4 +71,4 @@ python -m http.server 8080
 
 ---
 
-© 2026 Tresillo. All rights reserved.
+© 2026 Trecillo. All rights reserved.

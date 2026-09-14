@@ -1,0 +1,62 @@
+{
+  "color_space": "sRGB",
+  "brand": {
+    "yellow": {
+      "hex": "#FFD600",
+      "rgb": [
+        255,
+        214,
+        0
+      ],
+      "meaning": "SWIPE"
+    },
+    "magenta": {
+      "hex": "#EC008C",
+      "rgb": [
+        236,
+        0,
+        140
+      ],
+      "meaning": "JUMP"
+    },
+    "cyan": {
+      "hex": "#00BCF2",
+      "rgb": [
+        0,
+        188,
+        242
+      ],
+      "meaning": "HYPE"
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "meaning": "Integration"
+    }
+  },
+  "utility": {
+    "ink": {
+      "hex": "#101820",
+      "rgb": [
+        16,
+        24,
+        32
+      ],
+      "usage": "Dark presentation background"
+    },
+    "black": {
+      "hex": "#000000",
+      "rgb": [
+        0,
+        0,
+        0
+      ],
+      "usage": "Monochrome artwork"
+    }
+  },
+  "note": "Full-color artwork preserves the source raster gradients; palette values are the agreed brand color tokens."
+}

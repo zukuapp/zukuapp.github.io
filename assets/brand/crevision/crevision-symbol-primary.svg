@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-labelledby="title">
+  <title id="title">Crevision symbol</title>
+  <defs>
+    <linearGradient id="g" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="gd" x1="16" y1="24" x2="96" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="55%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="gl" x1="28" y1="18" x2="104" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#67E8F9"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#gd)" d="M36 22 L28 40 L24 58 L24 70 L28 88 L36 106 L48 98 L40 84 L36 70 L36 58 L40 44 L48 30 Z"/>
+  <path fill="url(#g)" d="M92 28 L108 22 L72 8 L36 22 L28 40 L40 46 L48 32 L72 22 L88 32 Z"/>
+  <path fill="url(#g)" d="M92 92 L108 98 L72 112 L36 106 L28 88 L40 82 L48 96 L72 98 L88 88 Z"/>
+  <path fill="url(#gl)" opacity=".92" d="M86 34 L96 30 L72 20 L48 30 L44 40 L52 44 L58 36 L72 28 L82 34 Z"/>
+  <path fill="url(#gl)" opacity=".88" d="M86 86 L96 90 L72 100 L48 98 L44 88 L52 84 L58 92 L72 92 L82 86 Z"/>
+  <path fill="url(#g)" d="M64 40 L64 80 L98 60 Z"/>
+  <path fill="#FFFFFF" opacity=".25" d="M64 40 L64 52 L80 46 Z"/>
+</svg>

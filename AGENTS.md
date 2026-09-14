@@ -1,7 +1,7 @@
 # zukuapp.github.io — 기업 소개 정적 사이트 (GitHub Pages)
 
 ## 목적
-**Tresillo × ZUKU** 기업 소개 사이트. GitHub Pages로 발행되는 완전 정적 사이트.  
+**Trecillo × ZUKU** 기업 소개 사이트. GitHub Pages로 발행되는 완전 정적 사이트.  
 공개 주소: `https://zukuapp.github.io/` · 서비스: `https://zuzunza.com`
 
 ## 스택
@@ -31,7 +31,7 @@ technology/
 company/index.html      # 회사 소개
 contact/index.html      # 문의
 assets/
-  favicon.svg / zuku-mark.svg / og-card.png
+  favicon.svg / zuku-mark.svg / og-card.png / brand/
 styles.css              # 토큰·레이아웃·애니메이션·인터랙션
 script.js               # 스테이지 탭/스크러브/포인터 인터랙션
 robots.txt / sitemap.xml / .nojekyll
@@ -59,7 +59,7 @@ GitHub Pages 설정: `main` 브랜치 `/` (root) → `https://zukuapp.github.io/
 
 ## 브랜드 표기
 - 플랫폼: **ZUKU (즈쿠)**
-- 회사: **Tresillo (트레실로)**
+- 회사: **Trecillo (트레실로)**
 - 조직 접두사: `zuku-` · GitHub 조직: `zukuapp`
 - "시즈쿠" 표기 금지
 
@@ -67,4 +67,4 @@ GitHub Pages 설정: `main` 브랜치 `/` (root) → `https://zukuapp.github.io/
 `contact@crevision.kr` · Seoul, Korea
 
 ## 라이선스
-© 2026 Tresillo. All rights reserved.
+© 2026 Trecillo. All rights reserved.

@@ -1,7 +1,14 @@
-/* Tresillo × ZUKU — interactive corporate site
-   Palette follows the ZUKU design system. Signature: live Hype / Swipe / Jump stage. */
+/* Trecillo × ZUKU — interactive corporate site
+   Official CI lockups in the chrome; cinematic dark stage for Hype / Swipe / Jump. */
 
 :root {
+  --ink: #101820;
+  --trecillo: #E91E63;
+  --trecillo-ink: #14171F;
+  --zuku-swipe: #FFD600;
+  --zuku-jump: #EC008C;
+  --zuku-hype: #00BCF2;
+
   --bg: #0a0a0f;
   --bg-raised: #12121a;
   --bg-elevated: #1a1a2e;
@@ -12,9 +19,9 @@
   --text-muted: #a0a0b8;
   --text-faint: #6a6a80;
 
-  --brand: #3dd8db;
+  --brand: #00BCF2;
   --brand-bright: #5ce1e6;
-  --brand-deep: #00c9c9;
+  --brand-deep: #00a8d6;
 
   --hype: #00d4ff;
   --swipe: #ff2d78;
@@ -185,11 +192,43 @@ footer { position: relative; z-index: 1; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.7rem;
   min-width: 0;
+  flex: 0 1 auto;
 }
 
-.brand img { width: 26px; height: auto; }
+.brand img {
+  display: block;
+}
+
+.brand img.brand-trecillo {
+  height: 32px;
+  width: auto;
+  max-width: min(196px, 46vw);
+  flex-shrink: 1;
+}
+
+.brand img.brand-zuku {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand img.brand-teapot {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.brand-sep {
+  width: 1px;
+  height: 22px;
+  background: var(--line-strong);
+  flex-shrink: 0;
+}
 
 .brand-name {
   font-size: 1.05rem;
@@ -1208,6 +1247,11 @@ a.format-card:hover { color: inherit; }
 }
 a.company-mark { display: block; text-decoration: none; }
 .company-mark:hover { -webkit-text-stroke-color: var(--accent); }
+.company-mark img {
+  width: min(320px, 100%);
+  height: auto;
+  display: block;
+}
 
 .company-mark span {
   -webkit-text-stroke: 0;
@@ -1339,8 +1383,9 @@ a.company-mark { display: block; text-decoration: none; }
 footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 2rem;
+  gap: 1rem 2rem;
   justify-content: space-between;
+  align-items: center;
   max-width: var(--maxw);
   margin-inline: auto;
   padding: 2rem var(--pad) 3rem;
@@ -1349,6 +1394,46 @@ footer {
   font-size: 0.66rem;
   letter-spacing: 0.18em;
   color: var(--text-faint);
+}
+
+.foot-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  letter-spacing: 0;
+  min-width: 9rem;
+}
+
+.foot-crevision {
+  display: inline-flex;
+  align-items: center;
+}
+
+.foot-crevision img {
+  width: 148px;
+  height: auto;
+  opacity: 0.92;
+  transition: opacity 0.2s var(--ease);
+}
+
+.foot-crevision:hover img,
+.foot-crevision:focus-visible img { opacity: 1; }
+
+.foot-mail {
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-size: 0.68rem;
+  transition: color 0.2s var(--ease);
+}
+
+.foot-mail:hover,
+.foot-mail:focus-visible { color: var(--text); }
+
+.foot-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .foot-links {
@@ -1393,8 +1478,11 @@ footer {
 @media (max-width: 560px) {
   .site-header { flex-wrap: wrap; gap: 0.75rem 1rem; }
   .company { display: none; }
+  .brand img.brand-teapot { display: none; }
+  .brand img.brand-trecillo { height: 22px; max-width: min(132px, 46vw); }
+  .brand img.brand-zuku { width: 24px; height: 24px; }
   .site-header nav { width: 100%; justify-content: space-between; }
-  footer { flex-direction: column; }
+  footer { flex-direction: column; align-items: flex-start; }
   .stage-frame,
   .stage-panel { min-height: 420px; }
 }
@@ -1877,6 +1965,9 @@ footer {
     padding-block: 0.85rem;
   }
   .company { display: none; }
+  .brand img.brand-teapot { display: none; }
+  .brand img.brand-trecillo { height: 22px; max-width: min(132px, 46vw); }
+  .brand img.brand-zuku { width: 24px; height: 24px; }
   .site-header nav {
     width: 100%;
     justify-content: flex-start;

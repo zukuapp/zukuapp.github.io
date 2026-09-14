@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="Create what moves next. 창작과 플레이가 이어지는 ZUKU 플랫폼.">
   <meta name="twitter:image" content="https://zukuapp.github.io/assets/og-card.png">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/zuku-mark.svg">
+  <link rel="apple-touch-icon" href="/assets/brand/zuku/zuku-apple-touch-teapot-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800&display=swap">
@@ -43,9 +43,11 @@
   <div class="spot" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="/" aria-label="ZUKU 홈">
-      <img src="/assets/trecillo-logo.svg" alt="" width="120" height="30" aria-hidden="true" style="vertical-align: middle;">
-      <span class="brand-name">ZUKU</span>
+    <a class="brand" href="/" aria-label="Trecillo × ZUKU 홈">
+      <img class="brand-trecillo" src="/assets/trecillo-logo.svg" alt="Trecillo" width="168" height="48">
+      <span class="brand-sep" aria-hidden="true"></span>
+      <img class="brand-zuku" src="/assets/brand/zuku/zuku-symbol-color-transparent.png" alt="ZUKU" width="36" height="36">
+      <img class="brand-teapot" src="/assets/brand/zuku/zuku-teapot-48.png" alt="" width="28" height="28">
     </a>
     <nav aria-label="주요 메뉴">
       <a href="/platform/">Platform</a>
@@ -268,7 +270,7 @@
     <section id="company" class="company-section">
       <div class="company-visual reveal">
         <a class="company-mark" href="/company/" aria-label="Trecillo 회사 페이지">
-          <img src="/assets/trecillo-logo.svg" alt="" width="280" height="70" aria-hidden="true">
+          <img src="/assets/trecillo-logo.svg" alt="Trecillo" width="280" height="80">
         </a>
         <div class="tresillo" aria-hidden="true">
           <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span>
@@ -299,7 +301,16 @@
   </main>
 
   <footer>
-    <span>© 2026 TRECILLO. ALL RIGHTS RESERVED.</span>
+    <div class="foot-identity">
+      <a class="foot-crevision" href="https://crevision.kr" rel="noopener noreferrer">
+        <img src="/assets/brand/crevision/crevision-wordmark-white.png" alt="Crevision" width="148" height="22">
+      </a>
+      <a class="foot-mail" href="mailto:contact@crevision.kr">contact@crevision.kr</a>
+    </div>
+    <span class="foot-legal">
+      <span>© 2026 TRECILLO. ALL RIGHTS RESERVED.</span>
+      <span>SEOUL · KOREA</span>
+    </span>
     <span class="foot-links">
       <a href="/platform/">Platform</a>
       <a href="/technology/">Technology</a>
@@ -307,7 +318,6 @@
       <a href="/contact/">Contact</a>
       <a href="https://github.com/zukuapp">GitHub</a>
     </span>
-    <span>SEOUL · KOREA</span>
   </footer>
 
   <script src="/script.js" defer></script>

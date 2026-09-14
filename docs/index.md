@@ -1,7 +1,7 @@
 # zukuapp.github.io 문서 인덱스
 
 ## 개요
-**Tresillo × ZUKU** 기업 소개 정적 사이트 (GitHub Pages). 빌드 단계 없음.
+**Trecillo × ZUKU** 기업 소개 정적 사이트 (GitHub Pages). 빌드 단계 없음.
 
 ## 문서 목록
 | 파일 | 설명 |
@@ -12,7 +12,7 @@
 | `scripting.md` | `script.js` 스테이지 탭/스크러브/포인터 인터랙션 |
 | `assets.md` | `assets/` 브랜드 마크·파비콘·OG 카드 가이드 |
 | `deployment.md` | GitHub Pages 설정·커스텀 도메인·`.nojekyll` |
-| `brand-guidelines.md` | 브랜드 표기(ZUKU/Tresillo), 색상, 타이포그래피 |
+| `brand-guidelines.md` | 브랜드 표기(ZUKU/Trecillo), 색상, 타이포그래피 |
 | `changelog.md` | 배포 이력 |
 
 ## 페이지 구조

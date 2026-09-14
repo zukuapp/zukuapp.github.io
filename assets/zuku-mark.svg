@@ -1,12 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -122 200 244" role="img" aria-label="ZUKU droplet mark">
-  <defs>
-    <linearGradient id="zukuDrop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5CE1E6"/>
-      <stop offset="50%" stop-color="#3DD8DB"/>
-      <stop offset="100%" stop-color="#00C9C9"/>
-    </linearGradient>
-  </defs>
-  <path d="M 0 -110 C 0 -110, -85 -20, -85 25 C -85 75, -45 110, 0 110 C 45 110, 85 75, 85 25 C 85 -20, 0 -110, 0 -110 Z" fill="url(#zukuDrop)"/>
-  <ellipse cx="-25" cy="10" rx="22" ry="28" fill="#ffffff" opacity="0.25"/>
-  <ellipse cx="-15" cy="-15" rx="8" ry="10" fill="#ffffff" opacity="0.35"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 353 321" width="353" height="321" role="img" aria-labelledby="zuku-mark-title">
+  <title id="zuku-mark-title">ZUKU trinity mark</title>
+  <image href="brand/zuku/zuku-symbol-color-transparent.png" xlink:href="brand/zuku/zuku-symbol-color-transparent.png" width="353" height="321" preserveAspectRatio="xMidYMid meet"/>
 </svg>
