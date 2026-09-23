@@ -1,70 +1,36 @@
-# zukuapp.github.io — 기업 소개 정적 사이트 (GitHub Pages)
+# zukuapp.github.io — 공식 개발 문서와 제품 소개 사이트
 
 ## 목적
-**Trecillo × ZUKU** 기업 소개 사이트. GitHub Pages로 발행되는 완전 정적 사이트.  
-공개 주소: `https://zukuapp.github.io/` · 서비스: `https://zuzunza.com`
 
-## 스택
-- **빌드 단계 없음** — HTML/CSS/JS 정적 파일만
-- 의존성 0 — `styles.css`, `script.js`만 사용
-- 폰트: IBM Plex Mono, Syne, Pretendard (Google Fonts / jsDelivr CDN)
-- `.nojekyll`로 Jekyll 비활성화
+`https://zukuapp.github.io/`는 Trecillo × ZUKU의 공식 정적 GitHub Pages 사이트입니다. 첫 화면과 `/docs/`는 개발자 출발점이며, 기존 `/platform/`과 제품별 페이지는 제품 소개로 유지합니다.
 
 ## 구조
-```
-index.html              # 허브 — Hype/Swipe/Jump 3종 인터랙티브 스테이지
-platform/index.html     # 제품 표면 지도
-hype/index.html         # Hype 상세 + 데모
-swipe/index.html        # Swipe 상세 + 데모
-jump/index.html         # Jump 상세
-jump/studio/index.html  # Jump Studio 배급 파이프라인
-thread/index.html       # Thread(통합 홈) 진입
-vive/index.html         # Vive(글/문학)
-vine/index.html         # Vine(음악/보이스)
-aist/index.html         # Aist(AI 게임 스튜디오)
-technology/
-  index.html            # 기술 개요
-  unprivileged/index.html  # 안전한 실행 경계
-  contracts/index.html     # 명확한 제품 규칙
-  resources/index.html     # 리소스 한도
-  standards/index.html     # 공개 표준 우선
-company/index.html      # 회사 소개
-contact/index.html      # 문의
-assets/
-  favicon.svg / zuku-mark.svg / og-card.png / brand/
-styles.css              # 토큰·레이아웃·애니메이션·인터랙션
-script.js               # 스테이지 탭/스크러브/포인터 인터랙션
-robots.txt / sitemap.xml / .nojekyll
-```
 
-## 미디어 3종 (인터랙티브 데모)
-| 경로 | 내용 |
-|------|------|
-| `/` (hero) | Hype(시네마틱 3신), Swipe(세로 피드 4클립), Jump(미니 게임) 탭 전환 |
-| `/hype/` | Hype 전용 상세 |
-| `/swipe/` | Swipe 전용 상세 |
-| `/jump/` | Jump 허브 + Studio 링크 |
+- `index.html`: 개발자 중심 첫 화면
+- `docs/index.html`: 실행 가능한 ZWF2 입문, 공개 저장소/계약/상태 지도
+- `docs/index.md`: 문서 작성 및 검증 안내
+- `technology/**/index.html`: 공개 명세에 근거한 주제별 설명
+- `platform/`, `hype/`, `swipe/`, `jump/`, `thread/`, `vive/`, `vine/`, `aist/`: 제품 소개와 체험
+- `company/`, `contact/`: 회사와 문의
+- `styles.css`: 공통·제품 페이지 스타일
+- `docs.css`: 개발 문서 페이지 스타일
+- `assets/brand/trecillo/game-ci-20260919.png`: 현행 Trecillo 로고 원본 사본
 
-## 로컬 확인
-빌드 불필요. 정적 서버로 열기:
-```bash
-python -m http.server 8080
-# http://localhost:8080
-```
-또는 `npx serve` 등 어떤 정적 서버든 가능.
+## 정확성
 
-## 배포
-GitHub Pages 설정: `main` 브랜치 `/` (root) → `https://zukuapp.github.io/`  
-`.nojekyll` 존재로 Jekyll 처리 생략. `main` 푸시 시 자동 발행.
+- 기술 설명은 공개 저장소의 실제 코드·스키마·명세로 뒷받침하세요.
+- `zwf`는 실행 가능한 로컬 ZWF2 컴파일러입니다. `zuku-cli`의 create/validate/package/upload는 현재 미구현입니다.
+- `zuku-api`의 OpenAPI는 계약이고 SDK는 골격입니다. 운영 서비스나 npm 배포를 추정하지 마세요.
+- ZWF2 HTML5와 ZUKBOX ZWF1은 같은 `.zwf` 확장자를 공유하지만 다른 포맷입니다.
+- 게임 실행 경계는 ZWF2 명세에 따릅니다. CPU·메모리·PID 한도를 브라우저 격리의 보장으로 표현하지 마세요.
 
-## 브랜드 표기
-- 플랫폼: **ZUKU (즈쿠)**
-- 회사: **Trecillo (트레실로)**
-- 조직 접두사: `zuku-` · GitHub 조직: `zukuapp`
-- "시즈쿠" 표기 금지
+## 브랜드와 스택
 
-## 문의
-`contact@crevision.kr` · Seoul, Korea
+- 공식 표기: Trecillo(트레실로), ZUKU(즈쿠).
+- 로고는 `game-ci-20260919.png`의 픽셀·종횡비·검정 배경을 유지합니다.
+- 한글 본문 Pretendard, 영문 제목 Inter. Hype `#00BCF2`, Swipe `#FFD600`, Jump `#EC008C`.
+- 빌드 단계와 패키지 의존성이 없는 HTML/CSS/JS 정적 사이트입니다.
 
-## 라이선스
-© 2026 Trecillo. All rights reserved.
+## 확인
+
+`python3 -m http.server 8080`으로 `/`, `/docs/`, `/technology/`와 모바일 화면을 확인하세요. 내부 링크와 외부 명세 URL, 접근 가능한 탐색/포커스 상태를 검사하세요. `main` 루트가 GitHub Pages 발행 소스이며 `.nojekyll`이 있습니다.

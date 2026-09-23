@@ -1,74 +1,44 @@
-# zukuapp.github.io
+<p align="center">
+  <a href="https://zukuapp.github.io/docs/"><img src="https://raw.githubusercontent.com/zukuapp/.github/main/profile/assets/developer-hero.png" alt="Trecillo · ZUKU 개발자 문서" width="760"></a>
+</p>
 
-<div align="center">
+# ZUKU 개발자 사이트
 
-![Trecillo](/assets/brand/trecillo/trecillo-horizontal-white.svg)
-![ZUKU trinity](/assets/brand/zuku/zuku-symbol-color-transparent.png)
+**공개 사이트:** <https://zukuapp.github.io/> · **개발 문서:** <https://zukuapp.github.io/docs/>
 
-# Trecillo × ZUKU
+Trecillo가 만드는 ZUKU의 공식 GitHub Pages 저장소입니다. 첫 화면과 `/docs/`는 공개 도구, 파일 형식, API 계약을 찾는 개발자 출발점입니다. 제품 소개는 `/platform/` 이하에 유지합니다. 이 사이트는 HTML·CSS·JavaScript 정적 파일로 구성되며 빌드나 패키지 설치가 필요하지 않습니다.
 
-**Create what moves next.**
+## 문서 구조
 
-</div>
+| 경로 | 내용 |
+| --- | --- |
+| `/` | 개발자 첫 화면, 실행 가능한 입문 경로와 저장소 상태 |
+| `/docs/` | ZWF2 5분 입문, 공개 저장소 지도, Jump·API·ZUKBOX 계약, 기여 경로 |
+| `/technology/` | 공개 기술 계약의 탐색 입구 |
+| `/technology/unprivileged/` | ZWF2 브라우저 실행 경계와 보장 범위 |
+| `/technology/contracts/` | 형식·스키마·OpenAPI의 기준 문서 |
+| `/technology/resources/` | 공개 명세가 보장하는 범위와 리소스 한도의 구분 |
+| `/technology/standards/` | 공개 소스에서 확인할 수 있는 형식과 표준 |
+| `/platform/` 및 제품별 경로 | ZUKU 제품 소개와 체험 |
+| `/company/`, `/contact/` | 회사와 문의 |
+| `docs/index.md` | 이 저장소의 문서 작성·검증 안내 |
 
-> **공개 주소**: <https://zukuapp.github.io/>  
-> **서비스**: <https://zuzunza.com>  
-> **조직**: <https://github.com/zukuapp>  
-> **문의**: contact@crevision.kr
-
-ZUKU(즈쿠) 기업 소개 사이트 저장소입니다. GitHub Pages로 정적으로 발행됩니다. 의존성이 없는 HTML/CSS/JS만 사용합니다.
-
-## 구성
-
-| 경로 | 역할 |
-|---|---|
-| `/` | 허브. Hype / Swipe / Jump 인터랙티브 체험 무대 + 제품·회사·기술 입구 |
-| `/platform/` | Thread · Hype · Swipe · Jump · Jump Studio · Vive · Vine · Aist 제품 지도 |
-| `/hype/` | 가로 롱폼 + 인터랙티브 상세 |
-| `/swipe/` | 세로 숏폼 상세 |
-| `/jump/` | WASM/HTML5 게임 허브 |
-| `/jump/studio/` | Jump Studio 배급 파이프라인 |
-| `/thread/` | 통합 홈 · 미리보기 광장 |
-| `/vive/` | 글 · 문학 · 연재 |
-| `/vine/` | 음악 · 보이스 · 공유 |
-| `/aist/` | AI로 게임을 만드는 웹 스튜디오 |
-| `/technology/` | 기술 개요 + 안전한 경계 · 명확한 제품 규칙 · 리소스 한도 · 공개 표준 우선 |
-| `/company/` | 회사 소개 |
-| `/contact/` | 문의 |
-| `/docs/index.md` | 사이트 자체 가이드 |
-
-## 정적 자산
-
-| 파일 | 용도 |
-|---|---|
-| `styles.css` | 토큰 · 레이아웃 · 애니메이션 · 인터랙션 |
-| `script.js` | 체험 무대 탭/스크러브/포인터 인터랙션 |
-| `assets/favicon.svg` | Trecillo 심볼 파비콘 (공식 CI) |
-| `assets/trecillo-logo.svg` | Trecillo 가로 로고 (화이트) |
-| `assets/zuku-mark.svg` | ZUKU 트리니티 PNG 래퍼 |
-| `assets/brand/` | Trecillo SVG · ZUKU PNG · 2026 teapot · Crevision 워드마크 |
-| `assets/og-card.png` | OG/Twitter 카드 |
+`/docs/`의 저장소별 명령과 형식은 각 저장소 README·스키마·명세로 연결됩니다. 서비스 가용성이나 배포 상태를 공개 계약만으로 보증하지 않습니다. **ZWF2 HTML5 패키지**와 ZUKBOX의 이전 **ZWF1 바이너리**는 같은 `.zwf` 확장자를 사용해도 형식이 다릅니다.
 
 ## 로컬 확인
 
-빌드 단계가 없습니다. 정적 서버로 열어 확인합니다.
-
 ```bash
-python -m http.server 8080
-# http://localhost:8080
+python3 -m http.server 8080
 ```
 
-## 브랜드 표기
+<http://localhost:8080/>과 <http://localhost:8080/docs/>를 열어 데스크톱·모바일에서 확인합니다. 루트 경로를 사용하는 정적 사이트이므로 `file://` 대신 서버에서 확인하세요. `main` 브랜치의 루트를 GitHub Pages로 발행하며 `.nojekyll`이 있습니다.
 
-- 플랫폼: **ZUKU (즈쿠)**
-- 회사: **Trecillo (트레실로)**
-- 조직 접두사: `zuku-`
-- GitHub 조직: `zukuapp`
+## 브랜드
 
-## 배포
+현행 Trecillo 로고는 `assets/brand/trecillo/game-ci-20260919.png`에 보존했습니다. [원본](https://trecillo.crevision.kr/assets/brand/game-ci.png?v=20260919)의 픽셀과 비율을 유지합니다. 한글 본문은 Pretendard, 영문 제목·레이블은 Inter를 사용합니다. ZUKU의 색은 Hype `#00BCF2`, Swipe `#FFD600`, Jump `#EC008C`이고 Trecillo 로고 분홍은 `#FF2D7A`입니다.
 
-`main` 브랜치 루트로 GitHub Pages 발행. `.nojekyll`로 Jekyll 처리를 비활성화했습니다.
+## 변경 제안
 
----
+오탈자·깨진 링크·상태 오류는 이 저장소의 이슈 또는 PR로 알려 주세요. 명령과 형식에 대한 변경은 해당 소스 저장소에서 먼저 확인하고, 사이트의 안내를 함께 갱신해 주세요. [공통 기여 안내](https://github.com/zukuapp/.github/blob/main/CONTRIBUTING.md)와 [보안 정책](https://github.com/zukuapp/.github/blob/main/SECURITY.md)을 따릅니다.
 
-© 2026 Trecillo. All rights reserved.
+© 2026 Trecillo.

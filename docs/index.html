@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>개발 문서 · ZUKU</title>
+    <meta
+      name="description"
+      content="ZUKU 공개 개발 문서. ZWF2 5분 입문, 저장소 상태, Jump·API·ZUKBOX 명세와 기여 경로."
+    />
+    <meta name="theme-color" content="#0b0c10" />
+    <link rel="canonical" href="https://zukuapp.github.io/docs/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Trecillo × ZUKU" />
+    <meta property="og:title" content="ZUKU 개발 문서" />
+    <meta
+      property="og:description"
+      content="ZWF2 첫 실행부터 Jump·API·ZUKBOX 공개 계약까지."
+    />
+    <meta property="og:url" content="https://zukuapp.github.io/docs/" />
+    <meta
+      property="og:image"
+      content="https://zukuapp.github.io/assets/og-card.png"
+    />
+    <link
+      rel="icon"
+      href="/assets/brand/trecillo/game-ci-20260919.png"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/docs.css" />
+  </head>
+  <body class="dev-docs">
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="dev-header">
+      <a class="dev-brand" href="/" aria-label="Trecillo ZUKU 개발자 홈"
+        ><img
+          src="/assets/brand/trecillo/game-ci-20260919.png"
+          alt="Trecillo"
+          width="2048"
+          height="1411"
+        /><span>ZUKU <small>DEVELOPERS</small></span></a
+      >
+      <nav aria-label="주요 메뉴">
+        <a class="current" href="/docs/" aria-current="page">개발 문서</a
+        ><a href="#repositories">저장소</a><a href="#contracts">공개 명세</a
+        ><a href="/platform/">플랫폼</a
+        ><a class="dev-header-link" href="https://github.com/zukuapp"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main" class="dev-doc-layout dev-shell">
+      <aside class="dev-toc" aria-label="문서 목차">
+        <p>ON THIS PAGE</p>
+        <a href="#overview">개요</a>
+        <a href="#quickstart">ZWF2 5분 입문</a>
+        <a href="#repositories">저장소 지도</a>
+        <a href="#jump">Jump 계약</a>
+        <a href="#api">API 계약</a>
+        <a href="#zukbox">ZUKBOX</a>
+        <a href="#contracts">형식과 실행 경계</a>
+        <a href="#contribute">기여와 문의</a>
+      </aside>
+      <article class="dev-document">
+        <section id="overview" class="dev-doc-intro">
+          <p class="dev-eyebrow">
+            <span class="dev-dot" aria-hidden="true"></span> PUBLIC DEVELOPER
+            DOCUMENTATION
+          </p>
+          <h1>ZUKU 개발 문서</h1>
+          <p class="dev-lead">
+            공개 저장소의 코드·형식·API 계약을 읽고, 실제로 실행할 수 있는
+            경로부터 시작하세요. 세부 명령과 규칙은 각 저장소의
+            README·스키마·명세가 기준입니다.
+          </p>
+          <div class="dev-status-row">
+            <span
+              ><i class="dev-status-dot live"></i>실행 가능: zwf 로컬 도구</span
+            ><span
+              ><i class="dev-status-dot contract"></i>계약 공개: Jump·API</span
+            ><span
+              ><i class="dev-status-dot prototype"></i>시제품: zuku-cli</span
+            >
+          </div>
+          <p class="dev-callout">
+            이 문서는 공개 코드에서 확인한 상태를 설명합니다. API 엔드포인트
+            운영, 서비스 가입, 배포 일정은 공개 계약만으로 보증할 수 없습니다.
+          </p>
+        </section>
+
+        <section id="quickstart" class="dev-doc-section">
+          <p class="dev-kicker">01 / FIRST RUN</p>
+          <h2>HTML5 ZIP에서 ZWF2까지</h2>
+          <p>
+            <a href="https://github.com/zukuapp/zwf"><code>zwf</code> 저장소</a
+            >의 컴파일러는 HTML5 ZIP을 ZWF2 <code>.zwf</code>로 만들고
+            매니페스트와 파일 해시를 검사합니다.
+            <strong>Git, Node.js 22 이상, npm, <code>zip</code></strong
+            >을 준비하세요. npm 게시 패키지가 아닌 저장소 소스에서 실행합니다.
+          </p>
+          <ol class="dev-steps">
+            <li>공개 저장소를 복제하고 테스트를 실행합니다.</li>
+            <li>포함된 HTML 예제를 ZIP으로 묶습니다.</li>
+            <li>컴파일한 파일을 <code>inspect</code>로 다시 검사합니다.</li>
+          </ol>
+          <pre><code>git clone https://github.com/zukuapp/zwf.git
+cd zwf
+npm ci
+npm test
+zip -j hello.zip examples/hello/index.html
+node src/cli.mjs compile hello.zip -o hello.zwf --title "Hello ZWF"
+node src/cli.mjs inspect hello.zwf</code></pre>
+          <p>
+            검사 결과에서 <code>version: 2</code>,
+            <code>profile: "html5-sandbox/2"</code>,
+            <code>entry_point: "index.html"</code>을 확인하세요. 컴파일러는 기존
+            출력 파일을 덮어쓰지 않습니다. 직접 만든 앱은 스크립트·글꼴·이미지
+            등 필요한 파일을 ZIP에 포함하고 상대 경로를 사용해야 합니다.
+          </p>
+          <p class="dev-links">
+            <a href="https://github.com/zukuapp/zwf/blob/main/README.md"
+              >전체 사용법 ↗</a
+            ><a href="https://github.com/zukuapp/zwf/blob/main/SPEC.md"
+              >ZWF2 형식 명세 ↗</a
+            ><a
+              href="https://github.com/zukuapp/.github/blob/main/docs/getting-started.md"
+              >GitHub 입문 문서 ↗</a
+            >
+          </p>
+        </section>
+
+        <section id="repositories" class="dev-doc-section">
+          <p class="dev-kicker">02 / SOURCE MAP</p>
+          <h2>공개 저장소 지도</h2>
+          <p>
+            각 저장소는 서로 다른 역할을 맡습니다. 먼저 상태를 확인하고, 정확한
+            명령과 데이터 구조는 해당 저장소의 문서를 따르세요.
+          </p>
+          <div class="dev-repo-list">
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/zwf">zwf ↗</a></strong
+              ><span>실행 가능</span>
+              <p>
+                HTML5 ZIP → ZWF2 컴파일·검사.
+                <a href="https://github.com/zukuapp/zwf/blob/main/SPEC.md"
+                  >형식 명세</a
+                >.
+              </p>
+            </div>
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/zuku-engine-next2d"
+                  >zuku-engine-next2d ↗</a
+                ></strong
+              ><span>계약·어댑터</span>
+              <p>Jump 매니페스트 검증기, Next2D 어댑터, 런타임 계약.</p>
+            </div>
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/zuku-cli"
+                  >zuku-cli ↗</a
+                ></strong
+              ><span>시제품</span>
+              <p>
+                명령 이름과 구성이 있지만 실제 생성·검증·패키징·업로드는 구현
+                전입니다.
+              </p>
+            </div>
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/zuku-api"
+                  >zuku-api ↗</a
+                ></strong
+              ><span>계약 초안</span>
+              <p>
+                OpenAPI 3.1과 SDK 소스 골격. 공개 서비스나 npm 배포를 뜻하지
+                않습니다.
+              </p>
+            </div>
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/shizuku"
+                  >shizuku ↗</a
+                ></strong
+              ><span>공개 개요</span>
+              <p>플랫폼의 공개 구조와 저장소별 출발점을 설명합니다.</p>
+            </div>
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/zukuapp.github.io"
+                  >zukuapp.github.io ↗</a
+                ></strong
+              ><span>이 사이트</span>
+              <p>정적 GitHub Pages와 개발 문서 허브의 소스입니다.</p>
+            </div>
+            <div>
+              <strong
+                ><a href="https://github.com/zukuapp/.github"
+                  >.github ↗</a
+                ></strong
+              ><span>공통 안내</span>
+              <p>조직 프로필, 기여·보안 정책, 문서 목차와 이슈 양식.</p>
+            </div>
+          </div>
+          <p>
+            Next2D 기반 ZUKBOX 저장소는 아래
+            <a href="#zukbox">저작·재생 경로</a>에서 분리해 설명합니다.
+          </p>
+        </section>
+
+        <section id="jump" class="dev-doc-section">
+          <p class="dev-kicker">03 / JUMP</p>
+          <h2>Jump 패키지 계약</h2>
+          <p>
+            <a href="https://github.com/zukuapp/zuku-engine-next2d"
+              >zuku-engine-next2d</a
+            >에는 패키지
+            <a
+              href="https://github.com/zukuapp/zuku-engine-next2d/blob/main/schemas/jump-manifest.schema.json"
+              >매니페스트 스키마</a
+            >와
+            <a
+              href="https://github.com/zukuapp/zuku-engine-next2d/blob/main/contracts/jump-runtime.contract.json"
+              >런타임 계약</a
+            >, 공개 검증·어댑터 코드가 있습니다. 이 저장소만으로 서비스 호스트의
+            격리 환경이나 배포 파이프라인이 제공되는 것은 아닙니다.
+          </p>
+          <p>
+            <a href="https://github.com/zukuapp/zuku-cli">zuku-cli</a>는 현재
+            시제품입니다. <code>create</code>, <code>validate</code>,
+            <code>package</code>, <code>upload</code> 명령의 성공 메시지를 실제
+            작업 완료로 해석하지 마세요. 로컬에서 실제 HTML5 ZIP을 패키징하려면
+            위의 <a href="#quickstart">ZWF2 경로</a>를 사용하세요.
+          </p>
+        </section>
+
+        <section id="api" class="dev-doc-section">
+          <p class="dev-kicker">04 / API</p>
+          <h2>플랫폼 API 계약</h2>
+          <p>
+            <a
+              href="https://github.com/zukuapp/zuku-api/blob/main/spec/zuku-api-v1.yaml"
+              >OpenAPI 3.1 명세</a
+            >가 공개 경로와 요청·응답 형태의 기준입니다. 예를 들어 명세는
+            <code>/contents</code> 경로와 <code>offset</code>/<code>limit</code>
+            페이지 이동을 정의합니다. SDK 소스는 골격 단계이며, npm 설치나 운영
+            엔드포인트 이용 가능 여부는 공개 명세만으로 확인할 수 없습니다.
+          </p>
+          <p class="dev-links">
+            <a href="https://github.com/zukuapp/zuku-api"
+              >저장소와 상태 보기 ↗</a
+            ><a
+              href="https://github.com/zukuapp/zuku-api/blob/main/spec/zuku-api-v1.yaml"
+              >OpenAPI 원문 ↗</a
+            >
+          </p>
+        </section>
+
+        <section id="zukbox" class="dev-doc-section">
+          <p class="dev-kicker">05 / AUTHORING &amp; PLAYBACK</p>
+          <h2>ZUKBOX 저작·재생</h2>
+          <p>
+            <a href="https://github.com/zukuapp/zukbox">zukbox</a>는 Next2D 저작
+            도구 포크,
+            <a href="https://github.com/zukuapp/zukbox-player">zukbox-player</a
+            >는 렌더링 플레이어 포크,
+            <a href="https://github.com/zukuapp/zukbox-lang">zukbox-lang</a>은
+            언어 리소스 포크입니다.
+            <a href="https://github.com/zukuapp/zukbox-runtime"
+              >zukbox-runtime</a
+            >은 이전 ZWF1 바이너리의 파싱과 타임라인 평가를 맡는 별도
+            Rust/WebAssembly 코드입니다.
+          </p>
+          <p>
+            포크의 원본 API 문서와 라이선스는 그대로 따라야 합니다. ZUKU
+            변경점과 로컬 실행 명령은 각 포크의 README를 확인하세요.
+          </p>
+        </section>
+
+        <section id="contracts" class="dev-doc-section">
+          <p class="dev-kicker">06 / FORMAT BOUNDARY</p>
+          <h2>같은 확장자, 다른 형식</h2>
+          <div class="dev-compare">
+            <div>
+              <h3>ZWF2 / HTML5</h3>
+              <p>
+                <code>zwf</code>가 만드는 HTML5 ZIP 기반 패키지입니다.
+                <code>ZWF2</code> 헤더, JSON 매니페스트, ZIP과 파일별 SHA-256을
+                정의합니다.
+              </p>
+              <a href="https://github.com/zukuapp/zwf/blob/main/SPEC.md"
+                >ZWF2 명세 ↗</a
+              >
+            </div>
+            <div>
+              <h3>ZWF1 / ZUKBOX</h3>
+              <p>
+                이전 바이너리 타임라인 형식입니다. <code>ZWF1</code> 헤더와 청크
+                구조를 사용하며 런타임 명세는 v0.1 초안입니다.
+              </p>
+              <a
+                href="https://github.com/zukuapp/zukbox-runtime/blob/main/docs/zwf-format-v0.md"
+                >ZWF1 초안 ↗</a
+              >
+            </div>
+          </div>
+          <p>
+            두 형식은 <code>.zwf</code> 확장자를 공유하지만 같은 파서에 넣을 수
+            없습니다. ZWF2 플레이어는 컨테이너·경로·크기·해시를 검증하고 불투명
+            출처의 격리된 <code>iframe</code>과 CSP 등
+            <a
+              href="https://github.com/zukuapp/zwf/blob/main/SPEC.md#mandatory-player-behavior"
+              >명세의 실행 경계</a
+            >를 따라야 합니다. 이 경계가 CPU·메모리 사용량의 결정적 제한을
+            의미하지는 않습니다.
+          </p>
+          <p class="dev-links">
+            <a
+              href="https://github.com/zukuapp/.github/blob/main/docs/architecture.md"
+              >공개 아키텍처 전체 보기 ↗</a
+            ><a
+              href="https://github.com/zukuapp/.github/blob/main/docs/repository-map.md"
+              >저장소 지도 ↗</a
+            >
+          </p>
+        </section>
+
+        <section id="contribute" class="dev-doc-section">
+          <p class="dev-kicker">07 / WORK TOGETHER</p>
+          <h2>문서·코드 변경 제안</h2>
+          <p>
+            변경할 코드나 명세를 소유한 저장소에 이슈 또는 PR을 남기고, 재현
+            절차·예상 결과·검증 결과를 적어 주세요. 이 사이트의 오탈자나 잘못된
+            링크는
+            <a href="https://github.com/zukuapp/zukuapp.github.io"
+              >사이트 저장소</a
+            >에서 제안할 수 있습니다.
+          </p>
+          <p>
+            <strong>취약점은 공개 이슈에 적지 말아 주세요.</strong>
+            <a href="https://github.com/zukuapp/.github/blob/main/SECURITY.md"
+              >비공개 신고 경로</a
+            >를 이용해 주세요.
+          </p>
+          <p class="dev-links">
+            <a
+              href="https://github.com/zukuapp/.github/blob/main/CONTRIBUTING.md"
+              >기여 안내 ↗</a
+            ><a href="https://github.com/zukuapp/.github/blob/main/SECURITY.md"
+              >보안 정책 ↗</a
+            ><a href="https://github.com/zukuapp/.github/blob/main/SUPPORT.md"
+              >지원 안내 ↗</a
+            >
+          </p>
+        </section>
+        <p class="dev-review-note">
+          공개 저장소 상태 확인: 2026-09-23 · 정확한 버전과 명령은 각 저장소의
+          최신 문서를 따르세요.
+        </p>
+      </article>
+    </main>
+    <footer class="dev-footer dev-shell">
+      <div>
+        <strong>Trecillo / ZUKU</strong>
+        <p>개발 문서와 공개 계약의 출발점</p>
+      </div>
+      <nav aria-label="하단 메뉴">
+        <a href="/">홈</a><a href="/docs/">개발 문서</a
+        ><a href="/platform/">플랫폼</a><a href="/contact/">문의</a>
+      </nav>
+      <small>© 2026 Trecillo</small>
+    </footer>
+  </body>
+</html>
