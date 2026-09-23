@@ -248,18 +248,28 @@ node src/cli.mjs inspect hello.zwf</code></pre>
 
         <section id="api" class="dev-doc-section">
           <p class="dev-kicker">04 / API</p>
-          <h2>플랫폼 API 계약</h2>
+          <h2>서비스 API와 공개 명세</h2>
           <p>
+            실제 ZUKU 서비스의 <code>/api/v1</code> 연동은
+            <a href="https://docs.zuzunza.com/">ZUKU API 가이드</a>에서
+            시작하세요. 인증, 콘텐츠·미디어 게시, 커뮤니티와 게임 클라우드의
+            현재 사용 범위 및 예제가 정리돼 있습니다.
+          </p>
+          <p>
+            별도의 공개
             <a
               href="https://github.com/zukuapp/zuku-api/blob/main/spec/zuku-api-v1.yaml"
-              >OpenAPI 3.1 명세</a
-            >가 공개 경로와 요청·응답 형태의 기준입니다. 예를 들어 명세는
-            <code>/contents</code> 경로와 <code>offset</code>/<code>limit</code>
-            페이지 이동을 정의합니다. SDK 소스는 골격 단계이며, npm 설치나 운영
-            엔드포인트 이용 가능 여부는 공개 명세만으로 확인할 수 없습니다.
+              >OpenAPI 3.1 초안</a
+            >은 설계 중인 경로와 요청·응답 형태를 설명합니다. 예를 들어 이
+            초안은 <code>/contents</code> 경로와 <code>offset</code>/<code
+              >limit</code
+            >
+            페이지 이동을 정의합니다. 공개 SDK 소스는 골격 단계이며, 초안만으로
+            npm 설치나 운영 엔드포인트 이용 가능 여부를 판단할 수 없습니다.
           </p>
           <p class="dev-links">
-            <a href="https://github.com/zukuapp/zuku-api"
+            <a href="https://docs.zuzunza.com/">서비스 API 가이드 ↗</a
+            ><a href="https://github.com/zukuapp/zuku-api"
               >저장소와 상태 보기 ↗</a
             ><a
               href="https://github.com/zukuapp/zuku-api/blob/main/spec/zuku-api-v1.yaml"
