@@ -1,5 +1,4 @@
-/* Trecillo × ZUKU — interactive corporate site
-   Official CI lockups in the chrome; cinematic dark stage for Hype / Swipe / Jump. */
+/* Trecillo × ZUKU — shared product pages and developer navigation. */
 
 :root {
   --ink: #101820;
@@ -19,13 +18,13 @@
   --text-muted: #a0a0b8;
   --text-faint: #6a6a80;
 
-  --brand: #00BCF2;
+  --brand: #E91E63;
   --brand-bright: #5ce1e6;
   --brand-deep: #00a8d6;
 
-  --hype: #00d4ff;
-  --swipe: #ff2d78;
-  --jump: #00ff88;
+  --hype: var(--zuku-hype);
+  --swipe: var(--zuku-swipe);
+  --jump: var(--zuku-jump);
   --purple: #6366f1;
 
   --accent: var(--hype);
@@ -38,8 +37,8 @@
 
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Noto Sans KR", "Malgun Gothic", Roboto, Helvetica, Arial, sans-serif;
-  --font-display: Syne, var(--font-sans);
-  --font-mono: "IBM Plex Mono", "SFMono-Regular", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-display: Inter, var(--font-sans);
+  --font-mono: "SFMono-Regular", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 
   --mx: 50%;
   --my: 30%;
@@ -202,10 +201,12 @@ footer { position: relative; z-index: 1; }
 }
 
 .brand img.brand-trecillo {
-  height: 32px;
-  width: auto;
-  max-width: min(196px, 46vw);
-  flex-shrink: 1;
+  width: 92px;
+  height: auto;
+  max-width: min(92px, 46vw);
+  border-radius: 6px;
+  background: #0b0c10;
+  flex-shrink: 0;
 }
 
 .brand img.brand-zuku {
@@ -1487,7 +1488,7 @@ footer {
   .site-header { flex-wrap: wrap; gap: 0.75rem 1rem; }
   .company { display: none; }
   .brand img.brand-teapot { display: none; }
-  .brand img.brand-trecillo { height: 22px; max-width: min(132px, 46vw); }
+  .brand img.brand-trecillo { width: 70px; height: auto; max-width: 70px; }
   .brand img.brand-zuku { width: 24px; height: 24px; }
   .site-header nav { width: 100%; justify-content: space-between; }
   footer { flex-direction: column; align-items: flex-start; }
@@ -1974,7 +1975,7 @@ footer {
   }
   .company { display: none; }
   .brand img.brand-teapot { display: none; }
-  .brand img.brand-trecillo { height: 22px; max-width: min(132px, 46vw); }
+  .brand img.brand-trecillo { width: 70px; height: auto; max-width: 70px; }
   .brand img.brand-zuku { width: 24px; height: 24px; }
   .site-header nav {
     width: 100%;
@@ -2002,4 +2003,3 @@ footer {
     height: auto;
   }
 }
-
