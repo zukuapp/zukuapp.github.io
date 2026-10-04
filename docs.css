@@ -6,7 +6,7 @@
   --dev-line: #333945;
   --dev-text: #f7f8fb;
   --dev-muted: #afb7c5;
-  --dev-pink: #e91e63;
+  --dev-pink: #ec008c;
   --dev-cyan: #00bcf2;
   --dev-yellow: #ffd600;
 }
@@ -64,7 +64,7 @@ body.dev-docs::before {
   text-decoration: none;
 }
 .dev-brand img {
-  width: 82px;
+  width: 119px;
   height: auto;
   flex: none;
   border-radius: 7px;
@@ -239,8 +239,15 @@ body.dev-docs::before {
   background: #0b0c10;
 }
 .dev-logo-frame img {
-  width: 100%;
+  display: block;
+  width: min(100%, 476px);
   height: auto;
+  margin: 40px auto;
+  padding-inline: 24px;
+}
+.dev-brand-slogan {
+  color: var(--dev-muted);
+  overflow-wrap: anywhere;
 }
 .dev-flow {
   display: flex;

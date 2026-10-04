@@ -1,6 +1,18 @@
+<!-- BEGIN ZUKU OFFICIAL BRAND -->
+<!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
-  <a href="https://zukuapp.github.io/docs/"><img src="https://raw.githubusercontent.com/zukuapp/.github/main/profile/assets/developer-hero.png" alt="Trecillo · ZUKU 개발자 문서" width="760"></a>
+  <a href="https://docs.zuzunza.com/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"
+        srcset="docs/branding/zuku-logo-dark.png">
+      <img src="docs/branding/zuku-logo-light.png"
+        alt="ZUKU" width="320">
+    </picture>
+  </a>
 </p>
+<p align="center">ZUKU - 내가 불러 일으키는 새로운 창작.</p>
+<!-- markdownlint-enable MD033 MD041 -->
+<!-- END ZUKU OFFICIAL BRAND -->
 
 # ZUKU 개발자 사이트
 
@@ -35,7 +47,7 @@ python3 -m http.server 8080
 
 ## 브랜드
 
-현행 Trecillo 로고는 `assets/brand/trecillo/game-ci-20260919.png`에 보존했습니다. [원본](https://trecillo.crevision.kr/assets/brand/game-ci.png?v=20260919)의 픽셀과 비율을 유지합니다. 한글 본문은 Pretendard, 영문 제목·레이블은 Inter를 사용합니다. ZUKU의 색은 Hype `#00BCF2`, Swipe `#FFD600`, Jump `#EC008C`이고 Trecillo 로고 분홍은 `#FF2D7A`입니다.
+ZUKU 문서 로고와 한영 사용 지침은 [공식 브랜드 안내](docs/branding/README.md)에 있습니다. 기존 회사 로고인 Trecillo 로고는 `assets/brand/trecillo/game-ci-20260919.png`에 보존했습니다. [원본](https://trecillo.crevision.kr/assets/brand/game-ci.png?v=20260919)의 픽셀과 비율을 유지합니다. 한글 본문은 Pretendard, 영문 제목·레이블은 Inter를 사용합니다. ZUKU의 색은 Hype `#00BCF2`, Swipe `#FFD600`, Jump `#EC008C`이고 Trecillo 로고 분홍은 `#FF2D7A`입니다.
 
 ## 변경 제안
 

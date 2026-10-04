@@ -19,15 +19,15 @@
 ## 정확성
 
 - 기술 설명은 공개 저장소의 실제 코드·스키마·명세로 뒷받침하세요.
-- `zwf`는 실행 가능한 로컬 ZWF2 컴파일러입니다. `zuku-cli`의 create/validate/package/upload는 현재 미구현입니다.
+- `zwf`는 로컬 ZWF2 컴파일러입니다. `zukujs-cli`의 소스 구현과 실제 GUI·서비스·릴리스 검증은 각각의 증거를 확인합니다.
 - `zuku-api`의 OpenAPI는 계약이고 SDK는 골격입니다. 운영 서비스나 npm 배포를 추정하지 마세요.
 - ZWF2 HTML5와 ZUKBOX ZWF1은 같은 `.zwf` 확장자를 공유하지만 다른 포맷입니다.
 - 게임 실행 경계는 ZWF2 명세에 따릅니다. CPU·메모리·PID 한도를 브라우저 격리의 보장으로 표현하지 마세요.
 
 ## 브랜드와 스택
 
-- 공식 표기: Trecillo(트레실로), ZUKU(즈쿠).
-- 로고는 `game-ci-20260919.png`의 픽셀·종횡비·검정 배경을 유지합니다.
+- 공식 표기: Trecillo(트레실로), ZUKU.
+- ZUKU 로고는 승인된 `ZUKU_Logo_Assets.zip`의 원본 PNG와 해시·종횡비·투명도를 유지합니다. `docs/branding/README.md`를 따릅니다. 회사 로고와 상류 저작권은 별도로 보존합니다.
 - 한글 본문 Pretendard, 영문 제목 Inter. Hype `#00BCF2`, Swipe `#FFD600`, Jump `#EC008C`.
 - 빌드 단계와 패키지 의존성이 없는 HTML/CSS/JS 정적 사이트입니다.
 

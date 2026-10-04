@@ -20,11 +20,11 @@
     <meta property="og:url" content="https://zukuapp.github.io/docs/" />
     <meta
       property="og:image"
-      content="https://zukuapp.github.io/assets/og-card.png"
+      content="https://zukuapp.github.io/assets/zuku-logo-dark.png"
     />
     <link
       rel="icon"
-      href="/assets/brand/trecillo/game-ci-20260919.png"
+      href="/assets/zuku-favicon.png"
       type="image/png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,12 +43,12 @@
   <body class="dev-docs">
     <a class="skip-link" href="#main">본문으로 건너뛰기</a>
     <header class="dev-header">
-      <a class="dev-brand" href="/" aria-label="Trecillo ZUKU 개발자 홈"
+      <a class="dev-brand" href="/" aria-label="ZUKU 개발자 홈"
         ><img
-          src="/assets/brand/trecillo/game-ci-20260919.png"
-          alt="Trecillo"
-          width="2048"
-          height="1411"
+          src="/assets/zuku-logo-dark.png"
+          alt="ZUKU"
+          width="119"
+          height="28"
         /><span>ZUKU <small>DEVELOPERS</small></span></a
       >
       <nav aria-label="주요 메뉴">
@@ -79,6 +79,7 @@
             DOCUMENTATION
           </p>
           <h1>ZUKU 개발 문서</h1>
+          <p class="dev-brand-slogan">ZUKU - 내가 불러 일으키는 새로운 창작.</p>
           <p class="dev-lead">
             공개 저장소의 코드·형식·API 계약을 읽고, 실제로 실행할 수 있는
             경로부터 시작하세요. 세부 명령과 규칙은 각 저장소의
@@ -90,7 +91,7 @@
             ><span
               ><i class="dev-status-dot contract"></i>계약 공개: Jump·API</span
             ><span
-              ><i class="dev-status-dot prototype"></i>시제품: zuku-cli</span
+              ><i class="dev-status-dot prototype"></i>공유 Core: zukujs-cli</span
             >
           </div>
           <p class="dev-callout">
@@ -169,13 +170,13 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             </div>
             <div>
               <strong
-                ><a href="https://github.com/zukuapp/zuku-cli"
-                  >zuku-cli ↗</a
+                ><a href="https://github.com/zukuapp/zukujs-cli"
+                  >zukujs-cli ↗</a
                 ></strong
-              ><span>시제품</span>
+              ><span>소스 구현</span>
               <p>
-                명령 이름과 구성이 있지만 실제 생성·검증·패키징·업로드는 구현
-                전입니다.
+                두 별칭이 같은 Agent Core를 사용합니다. 생성·검증·패키징·업로드
+                소스와 릴리스별 검증 상태를 확인하세요.
               </p>
             </div>
             <div>
@@ -238,11 +239,12 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             격리 환경이나 배포 파이프라인이 제공되는 것은 아닙니다.
           </p>
           <p>
-            <a href="https://github.com/zukuapp/zuku-cli">zuku-cli</a>는 현재
-            시제품입니다. <code>create</code>, <code>validate</code>,
-            <code>package</code>, <code>upload</code> 명령의 성공 메시지를 실제
-            작업 완료로 해석하지 마세요. 로컬에서 실제 HTML5 ZIP을 패키징하려면
-            위의 <a href="#quickstart">ZWF2 경로</a>를 사용하세요.
+            <a href="https://github.com/zukuapp/zukujs-cli">zukujs-cli</a>는
+            <code>zuku</code>와 <code>zukujs</code> 별칭, 단일 Agent Core와
+            생성·검증·패키징·업로드 소스를 제공합니다. 실제 서비스 호출과
+            공개 게시, 플랫폼별 GUI는 별도 검증 증거와 릴리스를 확인하세요.
+            로컬 패키징은 위의 <a href="#quickstart">ZWF2 경로</a>에서도
+            재현할 수 있습니다.
           </p>
         </section>
 
