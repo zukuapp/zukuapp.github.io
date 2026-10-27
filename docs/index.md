@@ -1,12 +1,12 @@
 # 사이트 문서 작성 안내
 
-이 저장소의 렌더링되는 개발 문서 입구는 [`/docs/index.html`](index.html)입니다. 이 Markdown 파일은 사이트 소스 작업자를 위한 안내입니다. 오래된 목차에 나열됐던 `site-structure.md` 등 존재하지 않는 파일은 더 이상 참조하지 않습니다.
+이 저장소의 렌더링되는 개발 문서 입구는 [`/docs/index.html`](index.html)입니다. 이 Markdown 파일은 사이트 소스 작업자를 위한 안내입니다. `site-structure.md` 등 이전 목차의 파일은 존재하지 않습니다. 사이트 버전은 `v27.26102701`입니다.
 
 ## 독자 경로
 
 1. `/`: 개발자 중심 첫 화면. 실행 가능한 ZWF2 경로와 공개 계약·시제품 상태를 구분합니다.
 2. `/docs/`: ZWF2 5분 입문, 11개 공개 저장소의 역할, Jump·API·ZUKBOX 계약과 기여 경로를 안내합니다.
-3. `/technology/`: 기술과 형식의 주제별 문서를 제공합니다. 공개 명세가 확인하지 못하는 자원 한도나 배포 상태는 주장하지 않습니다.
+3. `/technology/`: 기술과 형식의 주제별 문서를 제공합니다. 공개 명세에 없는 자원 한도나 배포 상태는 쓰지 않습니다.
 4. 각 저장소 README·스키마·명세: 정확한 명령, 버전, 데이터 형식의 기준입니다.
 
 `/platform/`, `/hype/`, `/swipe/`, `/jump/` 등의 경로는 제품 소개와 체험을 위해 유지합니다.
@@ -28,7 +28,7 @@
 - `assets/brand/trecillo/game-ci-20260919.png`: 현행 Trecillo 로고 사본
 - `sitemap.xml`: 공개 HTML 경로
 
-한글 본문은 Pretendard, 영문 제목은 Inter를 사용합니다. 로고의 종횡비와 검정 배경을 유지하세요. 최신 브랜드 근거는 [조직 브랜드 안내](https://github.com/zukuapp/.github/blob/main/docs/brand.md)에 있습니다.
+한글 본문은 Pretendard, 영문 제목은 Inter를 사용합니다. 로고는 종횡비와 검정 배경을 유지합니다. 최신 브랜드 근거는 [조직 브랜드 안내](https://github.com/zukuapp/.github/blob/main/docs/brand.md)에 있습니다.
 
 ## 확인과 게시
 
@@ -36,4 +36,8 @@
 python3 -m http.server 8080
 ```
 
-로컬에서 `/`, `/docs/`, `/technology/`와 모바일 화면을 확인하고, 내부 경로 및 GitHub 문서 링크를 검사합니다. `main` 루트가 GitHub Pages의 발행 소스이며 `.nojekyll`로 Jekyll 처리를 건너뜁니다. 발행 후 공개 URL에서 새 페이지와 링크를 다시 확인합니다.
+1. 위 명령으로 로컬 서버를 실행합니다.
+2. `/`, `/docs/`, `/technology/`와 모바일 화면을 확인합니다.
+3. 내부 경로와 GitHub 문서 링크를 검사합니다.
+4. `main`에 반영합니다. `main` 루트가 GitHub Pages의 발행 소스이며 `.nojekyll`로 Jekyll 처리를 건너뜁니다.
+5. 발행 후 공개 URL에서 새 페이지와 링크를 다시 확인합니다.
