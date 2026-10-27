@@ -94,10 +94,6 @@
               ><i class="dev-status-dot prototype"></i>공유 Core: zukujs-cli</span
             >
           </div>
-          <p class="dev-callout">
-            이 문서는 공개 코드의 상태를 설명합니다. 공개 계약은 API 엔드포인트
-            운영, 서비스 가입, 배포 일정을 보증하지 않습니다.
-          </p>
         </section>
 
         <section id="quickstart" class="dev-doc-section">
@@ -108,7 +104,6 @@
             >의 컴파일러는 HTML5 ZIP을 ZWF2 <code>.zwf</code>로 만들고
             매니페스트와 파일 해시를 검사합니다.
             요구 사항은 Git, Node.js 22 이상, npm, <code>zip</code>입니다.
-            npm 게시 패키지가 아닌 저장소 소스에서 실행합니다.
           </p>
           <ol class="dev-steps">
             <li>공개 저장소를 복제하고 테스트를 실행합니다.</li>
@@ -126,7 +121,8 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             검사 결과에서 <code>version: 2</code>,
             <code>profile: "html5-sandbox/2"</code>,
             <code>entry_point: "index.html"</code>이 출력됩니다. 컴파일러는 기존
-            출력 파일을 덮어쓰지 않습니다. 직접 만든 앱은 스크립트·글꼴·이미지
+            출력 파일을 덮어쓰지 않습니다. 다시 컴파일할 때는 새 파일 이름을
+            지정합니다. 직접 만든 앱은 스크립트·글꼴·이미지
             등 필요한 파일을 ZIP에 포함하고 상대 경로를 사용해야 합니다.
           </p>
           <p class="dev-links">
@@ -144,10 +140,6 @@ node src/cli.mjs inspect hello.zwf</code></pre>
         <section id="repositories" class="dev-doc-section">
           <p class="dev-kicker">02 / SOURCE MAP</p>
           <h2>공개 저장소 지도</h2>
-          <p>
-            각 저장소는 서로 다른 역할을 맡습니다. 정확한 명령과 데이터 구조는
-            해당 저장소의 문서가 기준입니다.
-          </p>
           <div class="dev-repo-list">
             <div>
               <strong
@@ -176,7 +168,7 @@ node src/cli.mjs inspect hello.zwf</code></pre>
               ><span>소스 구현</span>
               <p>
                 두 별칭이 같은 Agent Core를 사용합니다. 생성·검증·패키징·업로드
-                소스를 포함합니다. 검증 상태의 기준은 각 릴리스의 증거입니다.
+                소스를 포함합니다.
               </p>
             </div>
             <div>
@@ -186,8 +178,7 @@ node src/cli.mjs inspect hello.zwf</code></pre>
                 ></strong
               ><span>계약 초안</span>
               <p>
-                OpenAPI 3.1과 SDK 소스 골격. 공개 서비스나 npm 배포를 뜻하지
-                않습니다.
+                OpenAPI 3.1과 SDK 소스 골격.
               </p>
             </div>
             <div>
@@ -217,7 +208,7 @@ node src/cli.mjs inspect hello.zwf</code></pre>
           </div>
           <p>
             Next2D 기반 ZUKBOX 저장소는 아래
-            <a href="#zukbox">저작·재생 경로</a>에서 분리해 설명합니다.
+            <a href="#zukbox">저작·재생 경로</a>에 있습니다.
           </p>
         </section>
 
@@ -235,14 +226,9 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             <a
               href="https://github.com/zukuapp/zuku-engine-next2d/blob/main/contracts/jump-runtime.contract.json"
               >런타임 계약</a
-            >, 공개 검증·어댑터 코드가 있습니다. 서비스 호스트의 격리 환경과
-            배포 파이프라인은 이 저장소에 포함되지 않습니다.
+            >, 공개 검증·어댑터 코드가 있습니다.
           </p>
           <p>
-            <a href="https://github.com/zukuapp/zukujs-cli">zukujs-cli</a>는
-            <code>zuku</code>와 <code>zukujs</code> 별칭, 단일 Agent Core와
-            생성·검증·패키징·업로드 소스를 제공합니다. 서비스 호출, 공개 게시,
-            플랫폼별 GUI는 소스와 별도의 검증 증거와 릴리스가 기준입니다.
             로컬 패키징은 위의 <a href="#quickstart">ZWF2 경로</a>로도
             재현합니다.
           </p>
@@ -254,8 +240,8 @@ node src/cli.mjs inspect hello.zwf</code></pre>
           <p>
             실제 ZUKU 서비스의 <code>/api/v1</code> 연동은
             <a href="https://docs.zuzunza.com/">ZUKU API 가이드</a>를
-            따릅니다. 가이드는 인증, 콘텐츠·미디어 게시, 커뮤니티와 게임
-            클라우드의 현재 사용 범위와 예제를 다룹니다.
+            따릅니다. 가이드에 인증, 콘텐츠·미디어 게시, 커뮤니티와 게임
+            클라우드의 사용법과 예제가 있습니다.
           </p>
           <p>
             별도의 공개
@@ -266,13 +252,12 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             초안은 <code>/contents</code> 경로와 <code>offset</code>/<code
               >limit</code
             >
-            페이지 이동을 정의합니다. 공개 SDK 소스는 골격 단계이며, 초안만으로
-            npm 설치나 운영 엔드포인트 이용 가능 여부를 판단할 수 없습니다.
+            페이지 이동을 정의합니다. 공개 SDK 소스는 골격 단계입니다.
           </p>
           <p class="dev-links">
             <a href="https://docs.zuzunza.com/">서비스 API 가이드 ↗</a
             ><a href="https://github.com/zukuapp/zuku-api"
-              >저장소와 상태 보기 ↗</a
+              >저장소 보기 ↗</a
             ><a
               href="https://github.com/zukuapp/zuku-api/blob/main/spec/zuku-api-v1.yaml"
               >OpenAPI 원문 ↗</a
@@ -296,7 +281,7 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             Rust/WebAssembly 코드입니다.
           </p>
           <p>
-            포크의 원본 API 문서와 라이선스는 그대로 적용됩니다. ZUKU
+            각 포크에는 원본 Next2D의 라이선스와 API 문서가 적용됩니다. ZUKU
             변경점과 로컬 실행 명령은 각 포크의 README에 있습니다.
           </p>
         </section>
@@ -335,8 +320,7 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             <a
               href="https://github.com/zukuapp/zwf/blob/main/SPEC.md#mandatory-player-behavior"
               >명세의 실행 경계</a
-            >를 따라야 합니다. 이 경계가 CPU·메모리 사용량의 결정적 제한을
-            의미하지는 않습니다.
+            >를 따라야 합니다.
           </p>
           <p class="dev-links">
             <a
@@ -377,10 +361,6 @@ node src/cli.mjs inspect hello.zwf</code></pre>
             >
           </p>
         </section>
-        <p class="dev-review-note">
-          공개 저장소 상태 확인: 2026-09-23 · 정확한 버전과 명령은 각 저장소의
-          최신 문서가 기준입니다.
-        </p>
       </article>
     </main>
     <footer class="dev-footer dev-shell">

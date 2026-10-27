@@ -36,15 +36,15 @@
 | `/` | 개발자 첫 화면, 실행 가능한 입문 경로와 저장소 상태 |
 | `/docs/` | ZWF2 5분 입문, 공개 저장소 지도, Jump·API·ZUKBOX 계약, 기여 경로 |
 | `/technology/` | 공개 기술 계약의 탐색 입구 |
-| `/technology/unprivileged/` | ZWF2 브라우저 실행 경계와 보장 범위 |
+| `/technology/unprivileged/` | ZWF2 브라우저 실행 경계 |
 | `/technology/contracts/` | 형식·스키마·OpenAPI의 기준 문서 |
-| `/technology/resources/` | 공개 명세가 보장하는 범위와 리소스 한도의 구분 |
+| `/technology/resources/` | ZWF2 명세의 요구 사항과 실행 호스트의 리소스 한도 |
 | `/technology/standards/` | 공개 소스에 있는 형식과 표준 |
 | `/platform/` 및 제품별 경로 | ZUKU 제품 소개와 체험 |
 | `/company/`, `/contact/` | 회사와 문의 |
 | `docs/index.md` | 이 저장소의 문서 작성·검증 안내 |
 
-`/docs/`의 저장소별 명령과 형식은 각 저장소 README·스키마·명세로 연결됩니다. 공개 계약은 서비스 가용성이나 배포 상태를 보증하지 않습니다. ZWF2 HTML5 패키지와 ZUKBOX의 이전 ZWF1 바이너리는 같은 `.zwf` 확장자를 사용하지만 형식이 다릅니다.
+`/docs/`의 저장소별 명령과 형식은 각 저장소 README·스키마·명세로 연결됩니다. ZWF2 HTML5 패키지와 ZUKBOX의 이전 ZWF1 바이너리는 같은 `.zwf` 확장자를 사용하지만 형식이 다릅니다.
 
 ## 요구 사항
 
@@ -73,7 +73,7 @@ GitHub Pages는 `main` 브랜치의 루트를 발행합니다. `.nojekyll` 파�
 ## 브랜드
 
 - ZUKU 문서 로고와 한영 사용 지침은 [공식 브랜드 안내](docs/branding/README.md)에 있습니다.
-- 기존 회사 로고인 Trecillo 로고는 `assets/brand/trecillo/game-ci-20260919.png`에 보존합니다. [원본](https://trecillo.crevision.kr/assets/brand/game-ci.png?v=20260919)의 픽셀과 비율을 유지합니다.
+- Trecillo 회사 로고는 `assets/brand/trecillo/game-ci-20260919.png`에 있습니다. [원본](https://trecillo.crevision.kr/assets/brand/game-ci.png?v=20260919)의 픽셀과 비율을 유지해 사용합니다.
 - 한글 본문은 Pretendard, 영문 제목·레이블은 Inter를 사용합니다.
 
 | 색 | 값 |
